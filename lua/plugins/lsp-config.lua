@@ -111,13 +111,19 @@ return {
 					},
 				}),
 			})
-			-- juste après cmp.setup({...})
 			vim.diagnostic.config({
-				virtual_text = true,
-				signs = true,
-				underline = true,
-				update_in_insert = false,
+				virtual_text = true, -- Affiche les messages directement sur la ligne
+				underline = true, -- Souligne les erreurs
+				update_in_insert = false, -- N'affiche pas pendant que tu tapes
 				severity_sort = true,
+				signs = {
+					text = {
+						[vim.diagnostic.severity.ERROR] = "✘",
+						[vim.diagnostic.severity.WARN] = "▲",
+						[vim.diagnostic.severity.INFO] = "",
+						[vim.diagnostic.severity.HINT] = "⚑",
+					},
+				},
 			})
 			local signs = { Error = "✘ ", Warn = "▲ ", Hint = "⚑ ", Info = "» " }
 			for type, icon in pairs(signs) do
