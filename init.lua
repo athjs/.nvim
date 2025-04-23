@@ -16,7 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins") -- Charger les plugins depuis le dossier plugins
 
-vim.cmd.colorscheme("nightfox") -- Applique le thème
+vim.cmd.colorscheme("tokyonight-moon") -- Applique le thème
 
 -- Options globales
 vim.o.number = true -- Numéros de ligne
