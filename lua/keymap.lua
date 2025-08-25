@@ -1,0 +1,23 @@
+
+local keymap = vim.keymap
+
+keymap.set("n", "<leader>w", ":w<CR>", { desc = "Sauvegarder le fichier" })
+keymap.set("n", "<leader>q", ":q<CR>", { desc = "Quitter Neovim" })
+keymap.set({ "n", "v" }, "<leader>y", '"+y')
+keymap.set({ "n", "v" }, "<leader>d", '"+d')
+keymap.set("n", "<C-h>", "<C-w>h", { desc = "Fenêtre de gauche" })
+keymap.set("n", "<C-j>", "<C-w>j", { desc = "Fenêtre du bas" })
+keymap.set("n", "<C-k>", "<C-w>k", { desc = "Fenêtre du haut" })
+keymap.set("n", "<C-l>", "<C-w>l", { desc = "Fenêtre de droite" })
+keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+
+keymap.set("n", "<leader>f", ":Pick files<CR>")
+keymap.set("n", "<leader>h", ":Pick help<CR>")
+keymap.set("n", "<leader>e", ":Oil<CR>")
+keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split the window vertically" })
+keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split the window horizontally" })
+keymap.set("n", "<leader>sc", "<cmd>close<CR>", { desc = "Close the current split" })
+keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open a new tab" })
+keymap.set("n", "<leader>tc", "<cmd>tabclose<CR>", { desc = "Close current tab" })
+keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Close to the next tab" })
+keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Close to the previous tab" })

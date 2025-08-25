@@ -1,5 +1,6 @@
 return {
-	"rebelot/kanagawa.nvim",
+	"vague2k/vague.nvim",
+
 	lazy = false,
 	priority = 1000,
 	opts = {},
