@@ -1,4 +1,3 @@
-vim.g.mapleader = " "
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -15,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 require("keymap")
 require("mini.pick").setup()
-vim.cmd.colorscheme("vague")
+vim.cmd.colorscheme("tokyonight-moon")
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.tabstop = 2

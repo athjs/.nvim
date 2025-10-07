@@ -1,16 +1,18 @@
-
 local keymap = vim.keymap
 
+vim.g.mapleader = " "
 keymap.set("n", "<leader>w", ":w<CR>", { desc = "Sauvegarder le fichier" })
 keymap.set("n", "<leader>q", ":q<CR>", { desc = "Quitter Neovim" })
-keymap.set({ "n", "v" }, "<leader>y", '"+y')
-keymap.set({ "n", "v" }, "<leader>d", '"+d')
+keymap.set({ "n", "v" }, "<leader>y", '"*y')
+keymap.set({ "n", "v" }, "<leader>p", '"*p')
+keymap.set({ 'n', 'v' }, '<leader>o', ':update<CR> :source<CR>')
 keymap.set("n", "<C-h>", "<C-w>h", { desc = "Fenêtre de gauche" })
 keymap.set("n", "<C-j>", "<C-w>j", { desc = "Fenêtre du bas" })
 keymap.set("n", "<C-k>", "<C-w>k", { desc = "Fenêtre du haut" })
 keymap.set("n", "<C-l>", "<C-w>l", { desc = "Fenêtre de droite" })
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
-
+keymap.set("n", "K", vim.lsp.buf.hover)
+keymap.set("n", "gd", vim.lsp.buf.definition)
 keymap.set("n", "<leader>f", ":Pick files<CR>")
 keymap.set("n", "<leader>h", ":Pick help<CR>")
 keymap.set("n", "<leader>e", ":Oil<CR>")
