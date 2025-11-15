@@ -27,5 +27,9 @@ return {
         vim.api.nvim_buf_create_user_command(0, "LspClangdShowSymbolInfo", function()
             symbol_info()
         end, { desc = "Show symbol info" })
-    end,
+    -- on_new_config = function(config, _)
+    --     table.insert(config.cmd, "--header-insertion=never")
+    --     table.insert(config.cmd, "-I/opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/include")
+    --   end,
+    end
 }

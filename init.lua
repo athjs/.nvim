@@ -1,13 +1,13 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-	vim.fn.system({
-		"git",
-		"clone",
-		"--filter=blob:none",
-		"https://github.com/folke/lazy.nvim.git",
-		"--branch=stable",
-		lazypath,
-	})
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable",
+        lazypath,
+    })
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -15,7 +15,8 @@ require("lazy").setup("plugins")
 require("keymap")
 require("core.lsp")
 require("mini.pick").setup()
-vim.cmd.colorscheme("tokyonight-moon")
+require("mason").setup()
+vim.cmd.colorscheme("catppuccin")
 vim.o.number = true
 vim.o.winborder = "double"
 vim.o.relativenumber = true
@@ -24,4 +25,3 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.smartindent = true
 vim.o.termguicolors = true
-
