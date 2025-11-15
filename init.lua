@@ -15,8 +15,9 @@ require("lazy").setup("plugins")
 require("keymap")
 require("core.lsp")
 require("mini.pick").setup()
+require("lualine").setup()
 require("mason").setup()
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("tokyonight-moon")
 vim.o.number = true
 vim.o.winborder = "double"
 vim.o.relativenumber = true
