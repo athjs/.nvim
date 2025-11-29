@@ -1,7 +1,9 @@
 vim.lsp.enable({ "clangd", "lua_ls", "pyright", "taplo" })
 
 vim.diagnostic.config({
-    virtual_lines = {
+    virtual_text ={
+        -- virtual_lines = true,
+        -- virtual_text = true,
         current_line = true,
         underline = true,
         update_in_insert = false,
