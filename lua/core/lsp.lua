@@ -1,4 +1,4 @@
-vim.lsp.enable({ "clangd", "lua_ls", "pyright", "taplo", "rust-analyzer" })
+vim.lsp.enable({ "clangd", "lua_ls", "pyright", "taplo", "rust-analyzer", "texlab" })
 
 vim.diagnostic.config({
     virtual_text = {
