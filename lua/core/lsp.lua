@@ -1,9 +1,9 @@
-vim.lsp.enable({ "clangd", "lua_ls", "pyright", "taplo", "rust-analyzer", "texlab" })
+vim.lsp.enable({ "clangd", "lua_ls", "pyright", "taplo", "rust-analyzer", "tinymist" })
 
 vim.diagnostic.config({
     virtual_text = {
-        -- virtual_lines = true,
-        -- virtual_text = true,
+        virtual_lines = true,
+        virtual_text = true,
         current_line = true,
         underline = true,
         update_in_insert = false,
@@ -26,11 +26,3 @@ vim.diagnostic.config({
         },
     },
 })
-vim.keymap.set("n", "gd", function()
-    local clients = vim.lsp.get_clients({ bufnr = 0 })
-    if next(clients) then
-        vim.lsp.buf.definition()
-    else
-        print("Aucun LSP actif pour ce buffer")
-    end
-end, { noremap = true, silent = true })

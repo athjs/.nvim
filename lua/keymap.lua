@@ -3,8 +3,8 @@ local keymap = vim.keymap
 vim.g.mapleader = " "
 keymap.set("n", "<leader>w", ":w<CR>", { desc = "Write file" })
 keymap.set("n", "<leader>q", ":q<CR>", { desc = "Quit Neovim" })
-keymap.set({ "n", "v" }, "<leader>y", '"*y')
-keymap.set({ "n", "v" }, "<leader>p", '"*p')
+keymap.set({ "n", "v" }, "<leader>y", '"*y', {desc = "Copy in the * registry"})
+keymap.set({ "n", "v" }, "<leader>p", '"*p', {desc = "Past the * registry"})
 keymap.set({ "n", "v" }, "<leader>o", ":update<CR> :source<CR>")
 keymap.set("n", "<C-h>", "<C-w>h", { desc = "Left window" })
 keymap.set("n", "<C-j>", "<C-w>j", { desc = "Below window" })
